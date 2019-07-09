@@ -7,20 +7,31 @@ export default function() {
   const ex1 = 'use map to cube (n³) each value and return'
   const exercise1 = _ => {
     const numbers = [3, 6, 9, 12, 15, 18]
-    return [] // return answer here
+    return map(num => num * num * num, numbers)
+    
+    //return map(num => {Math.pow(num)}, numbers)
+//function cube (v) {return Math.pow(v)}
   }
 
   const ex2 = 'use filter to only return numbers divisible by 6'
   const exercise2 = _ => {
     const numbers = [28, 42, 55, 66, 72, 84, 93]
-    return [] // return answer here
+    const divBy6 = function (num) {
+      return (num % 6 === 0)
+    }
+    return filter(divBy6, numbers)
   }
+  
 
-  const ex3 = 'use reduce to sum the numbers'
+ const ex3 = 'use reduce to sum the numbers'
   const exercise3 = _ => {
     const numbers = [10, 20, 30, 40, 50, 60]
-    return 0 // return answer here
+    function reducer(acc, value) {
+      return acc + value
+    }
+    return reduce(reducer, 0, numbers) 
   }
+
 
   const ex4 = `use compose to run the following three commands
 
@@ -30,20 +41,53 @@ export default function() {
 `
   const exercise4 = _ => {
     const numbers = [1, 3, 6, 10, 13, 16]
-    return 0 // return answer here
+    const mapN = map(num => num * 3)
+    const filterN = filter(num => num % 2 === 0)
+    const reduceN = reduce((acc, value) => acc + value, 0)
+    const result = compose(reduceN, filterN, mapN)
+    return result(numbers)
   }
+
+
 
   const ex5 = 'Use map to find the square root of each number'
   const exercise5 = _ => {
     const numbers = [9, 16, 25, 36, 49, 64, 81]
-    return [] // return answer here
+    return map(num => Math.sqrt(num), numbers)
   }
 
   const ex6 = 'use filter to return numbers between 10 and 20'
   const exercise6 = _ => {
     const numbers = [1, 5, 6, 3, 10, 12, 18, 21, 28, 34, 39, 45]
-    return [] // return answer here
+   const only10To20 = numbers
+    .filter(num => num > 10 && num < 20 )
+    return only10To20
   }
+
+
+
+//return users 30 and up
+
+// const users = [
+//   {name: 'Samir', age: 27},
+//   {name: 'Angela', age: 33},
+//   {name: 'Beatrice', age: 42},
+//   {name: 'Shaniqua', age: 30},
+//   {name: 'Marvin', age: 23},
+//   {name: 'Sean', age: 47}
+// ];
+
+// const userNames = users
+//   .filter(user => user.age >= 30)
+//   .map(user => user.name);
+
+// console.log(userNames)
+
+
+
+
+
+
 
   const ex7 = `use compose and the checkPrimes function to run the following three commands:
 
