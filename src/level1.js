@@ -66,28 +66,6 @@ export default function() {
 
 
 
-//return users 30 and up
-
-// const users = [
-//   {name: 'Samir', age: 27},
-//   {name: 'Angela', age: 33},
-//   {name: 'Beatrice', age: 42},
-//   {name: 'Shaniqua', age: 30},
-//   {name: 'Marvin', age: 23},
-//   {name: 'Sean', age: 47}
-// ];
-
-// const userNames = users
-//   .filter(user => user.age >= 30)
-//   .map(user => user.name);
-
-// console.log(userNames)
-
-
-
-
-
-
 
   const ex7 = `use compose and the checkPrimes function to run the following three commands:
 
@@ -100,8 +78,33 @@ export default function() {
   `
   const exercise7 = _ => {
     const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    const mapNum = map(num => num - 1)
+    const filterNum = filter(checkPrimes)
+    const reduceNum = reduce((acc, num) => acc = acc + 1, 0)
+    const result = compose(reduceNum, filterNum, mapNum)
+    return result(numbers)
+   
+   
+   
     return 0 // return answer here
   }
+
+
+
+
+  // const exercise7 = _ => {
+  //   const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  //   const minusOne = map(num => num - 1)
+  //   const primer = filter(checkPrimes)
+  //   const counter = reduce((acc, num) => (acc = acc + 1), 0)
+  //   const result = compose(
+  //     counter,
+  //     primer,
+  //     minusOne
+  //   )
+  //   return result(numbers)
+  // }
+
 
   /* tests to validate exercises go here */
   test('Level 1', assert => {
