@@ -130,37 +130,7 @@ export default function() {
   }
 
 
-  // const ex3 = 'Use reduce to count the number of people with green eyes '
-  // const exercise3 = _ => {
-  //  const greenEyeClients = clients 
-  //  .reduce
-    
-  //   return reduce(acc, client) => {
-  //     if (client.eyeColor) === 'green' {
-        
-
-
-  // const products = [
-  //   { name: 'hard drive', price: 59.99 },
-  //   { name: 'lighbulbs', price: 2.59 },
-  //   { name: 'paper towels', price: 6.99 },
-  //   { name: 'flatscreen monitor', price: 159.99 },
-  //   { name: 'cable ties', price: 19.99 },
-  //   { name: 'ballpoint pens', price: 4.49 },
-  // ];
   
-  //     // Result: { name: 'paper towels', price: 6.99 }
-  // const product = products
-  //   .filter(product => product.price < 10)
-  //   .reduce((highest, product) => {
-  //   if (highest.price > product.price) {  
-  //   return highest;
-  //   }
-  //   return product;
-  //   });
-  //   console.log(product)
-
-
 
   const ex3 = 'Use reduce to count the number of people with green eyes '  
   const exercise3 = _ => {
@@ -180,32 +150,21 @@ export default function() {
 
 
 
-  // const ex3 = 'Use reduce to count the number of people with green eyes '
-  // const exercise3 = _ => {
-  //   return reduce(
-  //     (acc, client) => {
-  //       if (prop('eyeColor', client) === 'green') {
-  //         acc = acc + 1
-  //       }
-  //       return acc
-  //     },
-  //     0,
-  //     clients
-  //   )
-  // }
-
-
-
-
-
-
-
-
-
   const ex4 = `Use map, filter and reduce with compose to return the full name (as a string) of the female from Wyoming. `
   const exercise4 = _ => {
     return null
   }
+
+
+
+
+
+
+
+
+
+
+  
 
   const ex5 =
     'Use map and filter to return the full address of the clients living in North Carolina'

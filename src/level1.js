@@ -91,21 +91,6 @@ export default function() {
 
 
 
-
-  // const exercise7 = _ => {
-  //   const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-  //   const minusOne = map(num => num - 1)
-  //   const primer = filter(checkPrimes)
-  //   const counter = reduce((acc, num) => (acc = acc + 1), 0)
-  //   const result = compose(
-  //     counter,
-  //     primer,
-  //     minusOne
-  //   )
-  //   return result(numbers)
-  // }
-
-
   /* tests to validate exercises go here */
   test('Level 1', assert => {
     assert.same(exercise1(), [27, 216, 729, 1728, 3375, 5832], ex1)
